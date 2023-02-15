@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;700&display=swap");
+
+* {
+  --lightblue: #deecf3;
+  --darkred: #b72e2e;
+  --darkgrey: #4f4c4c;
+  --lightgrey: #f7f4f4;
+  --grey: #d9d9d9;
+  --link: #0084ff;
+  --text-gray: #666;
+  --border-deepblue: #103d4a;
+  --bg-footer: #333;
+  --hero: #00161c;
+  --start: #56ccf2;
+  --ultra: #b04cd9;
+  --mega: #e33b3b;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #00161c;
+  color: whitesmoke;
+}
+
+header {
+  color: whitesmoke;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 0rem;
+  border-bottom: 1px solid #103d4a;
+
+  backdrop-filter: blur(32px);
+  background-color: #222222;
+}
+
+header div.logo {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: lowercase;
+  margin-bottom: 1.5rem;
+  font-family: "Montserrat";
+}
+
+header div.logo img {
+  margin-right: 0.75rem;
+}
+
+header nav {
+  text-align: center;
+}
+
+header ul li {
+  font-size: 1.25rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+  margin-bottom: 1.25rem;
+  margin-left: 0.7rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+main section {
+  padding: 0 2.5rem;
+}
+
+section#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 6% 2.5rem;
+}
+
+section#hero h1 {
+  font-family: "Montserrat", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+section#hero p {
+  font-size: 1.25rem;
+  line-height: normal;
+  margin: 0 auto 2.5rem;
+}
+
+.btn {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-weight: 600;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 600ms;
+}
+.btn:hover {
+  scale: 1.1;
+  color: var(--hero);
+}
+
+.btn-lightblue {
+  border: 1px solid aliceblue;
+}
+
+.btn-lightblue:hover {
+  background-color: aliceblue;
+  color: var(--bg-footer);
+}
+
+.btn-darkred {
+  border: 1px solid var(--darkred);
+  color: var(--darkred);
+}
+
+.btn-darkred:hover {
+  background-color: var(--darkred);
+}
+
+section {
+  margin: 1rem 0;
+}
+
+section#destaques {
+  padding: 2.25rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section > h2 {
+  color: var(--lightgrey);
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 0.35rem;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section#destaques figure {
+  margin-bottom: 2rem;
+}
+
+section#destaques figure img {
+  max-width: 600px;
+  box-shadow: 0 2px 10px 5px #52043877;
+  margin-bottom: 0.5rem;
+}
+
+section#destaques figure figcaption {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: normal;
+  text-align: center;
+}
+
+section#diferenciais {
+  margin: 2.5rem 2rem auto;
+}
+
+section#diferenciais ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+section#diferenciais ul li h2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #a549cd;
+  font-weight: 600;
+}
+
+section#diferenciais ul li {
+  margin: 1rem 0;
+}
+
+section#diferenciais ul li.tempo h2::before {
+  background-image: url(../img/icone-relogio.png);
+  display: block;
+  flex-shrink: 0;
+  width: 32px;
+  height: 40px;
+  margin-right: 0.25rem;
+  content: "";
+  background-repeat: no-repeat;
+  scale: 0.75;
+}
+
+section#diferenciais ul li h2 + p {
+  margin: 0.5rem;
+  max-width: 28rem;
+  text-align: justify;
+}
+
+section#diferenciais ul li p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+section#diferenciais ul li.foco h2::before {
+  background-image: url(../img/icone-dinheiro.png);
+  display: block;
+  flex-shrink: 0;
+  width: 34px;
+  height: 40px;
+  margin-right: 0.25rem;
+  content: "";
+  background-repeat: no-repeat;
+  scale: 0.75;
+}
+
+section#diferenciais ul li.especialistas h2::before {
+  background-image: url(../img/icone-quimica.png);
+  display: block;
+  flex-shrink: 0;
+  width: 29px;
+  height: 42px;
+  margin-right: 0.25rem;
+  content: "";
+  background-repeat: no-repeat;
+  scale: 0.75;
+}
+
+section p strong {
+  font-weight: 700;
+}
+
+section#sobre p {
+  margin: 0.75rem 0;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+section#sobre ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 0;
+  filter: brightness(2.75);
+}
+
+section#sobre p:nth-last-child {
+  text-align: center;
+}
+
+section#sobre ul {
+  margin: 3rem 0;
+}
+
+section#sobre img.full-width {
+}
+
+section#planos ul li h3 {
+  font-size: 1.2rem;
+}
+section#planos {
+  align-items: center;
+  justify-content: center;
+}
+
+section#planos ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+section#planos ul > li {
+  background-color: var(--lightgrey);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0rem 15% 2rem;
+  border-radius: 0.5rem;
+  color: var(--darkgrey);
+  box-shadow: 0 2px 10px 2px #31065f29;
+  max-width: 25rem;
+}
+section#planos ul li > h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+
+section#planos ul li.start > h3 {
+  color: var(--start);
+}
+
+section#planos ul li.ultra > h3 {
+  color: var(--ultra);
+}
+
+section#planos ul li.mega > h3 {
+  color: var(--mega);
+}
+section#planos ul > li > ul li {
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  margin: 0 0 0.25rem 0;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.12rem;
+}
+
+section#planos ul > li > ul li:first-child {
+  margin: 0.75rem 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.btn-start,
+.btn-start:hover {
+  background-color: var(--start);
+  color: whitesmoke;
+}
+
+.btn-mega,
+.btn-megaa:hover {
+  background-color: var(--mega);
+  color: whitesmoke;
+}
+
+.btn-ultra,
+.btn-ultra:hover {
+  background-color: var(--ultra);
+  color: whitesmoke;
+}
+
+footer {
+  width: 100vw !important;
+}
